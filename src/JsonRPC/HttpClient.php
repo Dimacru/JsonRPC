@@ -282,9 +282,9 @@ class HttpClient
 
         if ($this->debug) {
             $this -> debug = [];
-            $this -> debug['request'] => (is_string($payload) ? $payload : json_encode($payload, JSON_PRETTY_PRINT));
-            $this -> debug['headers'] => var_export($headers, true);
-            $this -> debug['response'] => json_encode($response, JSON_PRETTY_PRINT);
+            $this -> debug['request'] = (is_string($payload) ? $payload : json_encode($payload, JSON_PRETTY_PRINT));
+            $this -> debug['headers'] = var_export($headers, true);
+            $this -> debug['response'] = json_encode($response, JSON_PRETTY_PRINT);
         }   
         $this->parseCookies($headers);
 
