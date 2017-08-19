@@ -282,9 +282,7 @@ class HttpClient
             error_log('==> Request: '.PHP_EOL.(is_string($payload) ? $payload : json_encode($payload, JSON_PRETTY_PRINT)));
             error_log('==> Headers: '.PHP_EOL.var_export($headers, true));
             error_log('==> Response: '.PHP_EOL.json_encode($response, JSON_PRETTY_PRINT));
-        }
-
-        $this->handleExceptions($headers);
+        }   
         $this->parseCookies($headers);
 
         return $response;
